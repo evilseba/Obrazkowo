@@ -16,8 +16,10 @@
       <div>
         <div><%= pin.description %></div>
         <div><%= link_to 'Wyświetl', pin %>
+        <% if pin.user == current_user %>
         <%= link_to 'Edytuj', edit_pin_path(pin) %>
-        <%= link_to 'Usuń', pin, method: :delete, data: { confirm: 'Jesteś pewny?' } %>
+        <%= link_to 'Usuń', pin, method: :delete, data: { confirm: 'Jesteś pewny/pewna?' } %>
+        <% end %>
         </div>
       </div>
     <% end %>

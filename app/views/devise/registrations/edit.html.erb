@@ -7,7 +7,7 @@
 
   <div class="form-group">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, class: 'form-control' %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -15,7 +15,7 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :password "Hasło" %> <i>(pozostaw puste, jeżeli nie chcesz go zmieniać)</i><br />
+    <%= f.label :password, "Hasło" %> <i>(pozostaw puste, jeżeli nie chcesz go zmieniać)</i><br />
     <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
   </div>
 
@@ -34,10 +34,14 @@
   </div>
 <% end %>
 </div>
+</div>
 <div class="panel panel-default">
 <div class="panel-heading"><h3>Usuń konto</h3></div>
 <div class="panel-body">
   
-<p>Nie jesteś zadowolony? <%= button_to "Usuń konto", registration_path(resource_name), data: { confirm: "Jesteś pewien?" }, method: :delete %></p>
+<p>Nie jesteś zadowolony? <%= button_to "Usuń konto", registration_path(resource_name), data: { confirm: "Jesteś pewien?" }, method: :delete, class: 'btn btn-primary' %></p>
 
-<%= link_to "Wstecz", :back, class: 'btn btn-primary' %>
+
+</div>
+<div class="panel-footer"><%= link_to "Wstecz", :back %></div>
+</div>
