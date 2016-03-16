@@ -9,6 +9,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'devise', '~> 3.5', '>= 3.5.6'
 
 group :development, :test do
   gem 'byebug'
@@ -24,7 +26,7 @@ group :development, :test do
 end
 
 group :production do
-  gem 'pg', '0.18.2'
+  gem 'pg', '0.18.4'
   gem 'rails_12factor', '0.0.3'
 end
 
