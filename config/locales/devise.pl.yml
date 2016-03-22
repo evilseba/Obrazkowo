@@ -62,11 +62,18 @@ pl:
   activerecord:
     errors:
       models:
+        pin:
+          attributes:
+            description:
+              blank: "Pola nie mogą być puste"
+            image:
+              blank: "Dodaj zdjęcie"
         user:
           attributes:
             email:
               blank: "brak"
-            password: 
+              taken: "już istnieje"
+            password:
               blank: "brak"
               too_short: "Za krótkie hasło"
             password_confirmation:
