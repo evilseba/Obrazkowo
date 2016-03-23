@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.5'
+gem 'will_paginate', '~> 3.1'
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
+gem 'masonry-rails', '~> 0.2.4'
+gem 'jquery-turbolinks', '~> 2.1'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'

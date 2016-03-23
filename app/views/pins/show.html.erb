@@ -1,23 +1,25 @@
-
-
-<p><div class="panel panel-default">
+<div class="row">
+<div class="col-md-offset-2 col-md-8">
+<div class="panel panel-default">
 <div class="panel-heading"> <h2>Pin</h2></div>
 <div class="panel-body">
- 
-  <%= image_tag @pin.image.url(:medium) %>
-  </p>
-  <%= @pin.description %>
+<div class="center">
+<%= image_tag @pin.image.url(:medium) %>
 </p>
-
+<%= @pin.description %>
+</p>
+</div>
 </div>
 <% if @pin.user == current_user %>
-<div class="panel-footer"><%= link_to 'Wstecz', pins_path %>
+<div class="panel-footer">
+<%= link_to 'Wstecz', pins_path %>
 <%= link_to 'Edycja', edit_pin_path(@pin) %>
 </div>
-
 <% else %>
 <div class="panel-footer"><%= link_to 'Wstecz', pins_path %></div>
-</div>
 <% end %>
-
 </div>
+</div>
+</div>
+
+
